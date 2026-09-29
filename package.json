@@ -1,0 +1,11 @@
+{
+  "name": "jestin-design-portfolio-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix jestin-uiux-portfolio run dev",
+    "build": "npm --prefix jestin-uiux-portfolio run build",
+    "start": "npm --prefix jestin-uiux-portfolio run start",
+    "lint": "npm --prefix jestin-uiux-portfolio run lint"
+  }
+}
