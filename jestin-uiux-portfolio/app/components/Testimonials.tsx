@@ -43,12 +43,12 @@ export default function Testimonials() {
             >
               <div className="flex flex-col gap-6">
                 <span className="text-5xl leading-none text-accent">“</span>
-                <h3 className="text-xl font-medium leading-[1.5] md:text-2xl md:leading-[1.4]">{t.quote}</h3>
+                <h3 className="text-h4 font-medium leading-[1.45]">{t.quote}</h3>
               </div>
               <div className="flex items-center gap-4">
                 <ImageSlot src={t.image} alt="" sizes="56px" className="h-14 w-14 shrink-0 rounded-full" />
                 <div>
-                  <p className="text-lg font-semibold">{t.name}</p>
+                  <p className="text-base font-semibold">{t.name}</p>
                   <p className="text-sm text-muted">{t.role}</p>
                 </div>
               </div>

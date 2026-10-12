@@ -22,6 +22,18 @@
   --font-mono: var(--font-fragment-mono);
 }
 
+/* Type scale: one size per heading level, fluid from phone (390px) to desktop (1440px). */
+@theme {
+  --text-h1: clamp(3rem, 2.07rem + 3.81vw, 5.5rem); /* 48 → 88 */
+  --text-h1--line-height: 1.05;
+  --text-h2: clamp(2.25rem, 1.786rem + 1.905vw, 3.5rem); /* 36 → 56 */
+  --text-h2--line-height: 1.1;
+  --text-h3: clamp(1.625rem, 1.3rem + 1.333vw, 2.5rem); /* 26 → 40 */
+  --text-h3--line-height: 1.15;
+  --text-h4: clamp(1.25rem, 1.157rem + 0.381vw, 1.5rem); /* 20 → 24 */
+  --text-h4--line-height: 1.3;
+}
+
 /* Layout breakpoints: phone < 810px, tablet 810–1199px, desktop >= 1200px */
 @theme {
   --breakpoint-md: 810px;
@@ -63,4 +75,9 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }

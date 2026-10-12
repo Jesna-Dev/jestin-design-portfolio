@@ -30,7 +30,7 @@ export default function Footer() {
         {/* CTA */}
         <p className="mb-6 font-mono text-base text-accent">{"// "}Have a video or design project? I&apos;m available for freelance work.</p>
         <a href={`mailto:${profile.email}`} className="group block">
-          <h2 className="text-[48px] font-bold leading-[1.125] tracking-[-0.03em] md:text-[80px] xl:text-[110px]">
+          <h2 className="text-h1 font-bold tracking-[-0.03em]">
             Let&apos;s work
             <br />
             <span className="inline-flex items-center gap-4 text-accent">
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-4">
             <p className="font-mono text-sm text-muted">Contact</p>
-            <a href={`mailto:${profile.email}`} className="text-xl font-semibold hover:text-accent md:text-2xl">
+            <a href={`mailto:${profile.email}`} className="text-h4 font-semibold hover:text-accent">
               {profile.email}
             </a>
             <p className="text-base text-muted">{profile.phone}</p>

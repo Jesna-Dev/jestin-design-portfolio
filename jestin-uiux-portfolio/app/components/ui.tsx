@@ -15,7 +15,7 @@ export function SectionTitle({ tag, title, className = "" }: { tag: string; titl
   return (
     <div className={`flex flex-col gap-4 ${className}`}>
       <Tag>{tag}</Tag>
-      <h2 className="text-[42px] font-semibold leading-[1.2] tracking-[-0.02em] md:text-[56px] xl:text-[72px]">{title}</h2>
+      <h2 className="text-h2 font-semibold tracking-[-0.02em]">{title}</h2>
     </div>
   );
 }

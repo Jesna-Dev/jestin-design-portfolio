@@ -6,10 +6,10 @@ import { profile } from "../content";
 const links = [
   { label: "Home", href: "#top" },
   { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Works", href: "#works" },
   { label: "Services", href: "#services" },
-  { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -55,7 +55,7 @@ export default function Header() {
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-[32px] font-semibold leading-[1.2] transition-colors hover:text-accent md:text-[48px]"
+                className="text-h2 font-semibold transition-colors hover:text-accent"
               >
                 {l.label}
               </a>

@@ -12,6 +12,7 @@ export const profile = {
   email: "rahulmr024@gmail.com",
   phone: "+91 94974 80842",
   heroImage: "/images/hero.png",
+  aboutImage: "/images/about.png",
   resume: "#", // TODO: link to resume PDF, e.g. "/resume.pdf"
   socials: [
     { label: "Behance", href: "https://www.behance.net/rahulmr024" },
@@ -29,11 +30,22 @@ export const aboutImages = [
   { src: "/images/poster-6.jpg", alt: "Serenity — concept film poster", width: 736, height: 1042 },
 ];
 
-export const skillGroups = [
-  { title: "Video Editing", items: ["Multicam Editing", "Audio Syncing & Sound Editing", "Green Screen & Keying", "Visual Effects", "Color Theory"] },
-  { title: "Motion & Design", items: ["Motion Graphics", "Animation", "Typography", "Branding & Identity", "Image Retouching", "Layout Design"] },
-  { title: "AI Workflow", items: ["Generative AI Ideation", "AI Storyboarding", "AI-assisted Design", "ChatGPT", "Freepik AI"] },
-  { title: "Tools", items: ["Premiere Pro", "After Effects", "Final Cut Pro", "DaVinci Resolve", "Photoshop", "Illustrator", "InDesign", "Figma", "Canva"] },
+// Tools & skills list (from the CV). `code` + `color` draw the badge in the detail card.
+export const tools = [
+  { name: "Premiere Pro", category: "Editing", code: "Pr", color: "#9999FF", desc: "Promos, reels, shorts and long-form edits with multicam and audio syncing." },
+  { name: "After Effects", category: "Motion", code: "Ae", color: "#D291FF", desc: "Motion graphics, animated explainers, titles and visual effects." },
+  { name: "DaVinci Resolve", category: "Color", code: "Da", color: "#FF7A59", desc: "Color correction and grading for a consistent, cinematic look." },
+  { name: "Final Cut Pro", category: "Editing", code: "Fc", color: "#B48CFF", desc: "Fast assembly edits for films and ads, learned alongside an Apple Certified Editor." },
+  { name: "Photoshop", category: "Design", code: "Ps", color: "#31A8FF", desc: "Social media creatives, posters and image retouching." },
+  { name: "Illustrator", category: "Design", code: "Ai", color: "#FF9A00", desc: "Vector branding, logos, icons and print-ready layouts." },
+  { name: "InDesign", category: "Layout", code: "Id", color: "#FF3366", desc: "Brochures, flyers and multi-page layouts." },
+  { name: "Figma", category: "Design", code: "Fg", color: "#A259FF", desc: "Web banners, presentations and quick visual mockups." },
+  { name: "ChatGPT", category: "AI", code: "AI", color: "#7AF298", desc: "Ideation, scripts and storyboards to kick off every project faster." },
+  { name: "Freepik AI", category: "AI", code: "Fp", color: "#7AF298", desc: "Generative visuals and AI-assisted poster workflows." },
+  { name: "Motion Graphics", category: "Skill", code: "MG", color: "#7AF298", desc: "Turning static visuals into dynamic, on-brand video content." },
+  { name: "Sound Editing", category: "Skill", code: "SE", color: "#7AF298", desc: "Audio syncing, cleanup and sound design that keeps edits punchy." },
+  { name: "Green Screen", category: "Skill", code: "GS", color: "#7AF298", desc: "Keying and compositing for clean, believable shots." },
+  { name: "Branding", category: "Skill", code: "BR", color: "#7AF298", desc: "Brand identity, typography and visuals that stay consistent everywhere." },
 ];
 
 export const story =
@@ -49,10 +61,10 @@ export type Project = { title: string; tags: string[]; image: string; href: stri
 
 // TODO: swap in real project titles, thumbnails and Behance links.
 export const projects: Project[] = [
-  { title: "Brand Explainer Videos — Weft Technologies", tags: ["Explainer", "Motion Graphics", "Storytelling"], image: "", href: "https://www.behance.net/rahulmr024" },
-  { title: "Promos, Reels & Shorts — Saina Play", tags: ["Promo", "Short-form", "YouTube"], image: "", href: "https://www.behance.net/rahulmr024" },
-  { title: "Social Media Campaigns — Weft Technologies", tags: ["Social Media", "Branding", "AI-assisted"], image: "", href: "https://www.behance.net/rahulmr024" },
-  { title: "Film & Ad Post-production — Cinema Salone", tags: ["Film", "Commercial", "Assembly Edit"], image: "", href: "https://www.behance.net/rahulmr024" },
+  { title: "Brand Explainer Videos — Weft Technologies", tags: ["Explainer", "Motion Graphics", "Storytelling"], image: "/images/work-1.jpg", href: "https://www.behance.net/rahulmr024" },
+  { title: "Promos, Reels & Shorts — Saina Play", tags: ["Promo", "Short-form", "YouTube"], image: "/images/work-2.jpg", href: "https://www.behance.net/rahulmr024" },
+  { title: "Social Media Campaigns — Weft Technologies", tags: ["Social Media", "Branding", "AI-assisted"], image: "/images/work-3.jpg", href: "https://www.behance.net/rahulmr024" },
+  { title: "Film & Ad Post-production — Cinema Salone", tags: ["Film", "Commercial", "Assembly Edit"], image: "/images/work-4.jpg", href: "https://www.behance.net/rahulmr024" },
 ];
 
 export const services = [
@@ -125,12 +137,6 @@ export const clients = [
   { name: "Client Six", logo: "" },
 ];
 
-export const posts = [
-  { title: "How I use AI without making videos look AI", tag: "Process", date: "Sep 2026", image: "", href: "#" },
-  { title: "Turning static visuals into scroll-stopping video", tag: "Motion", date: "Aug 2026", image: "", href: "#" },
-  { title: "How I use generative AI for storyboarding and ideation", tag: "AI Tools", date: "Jul 2026", image: "", href: "#" },
-];
-
 export const experience: { role: string; icon: "design" | "video" | "film"; company: string; period: string; points: string[] }[] = [
   {
     role: "Creative Designer & Video Editor",
@@ -164,18 +170,13 @@ export const experience: { role: string; icon: "design" | "video" | "film"; comp
   },
 ];
 
-export const education = [
-  { title: "Higher Diploma in Multimedia", place: "Image Creative Education, Kottayam", period: "2016 — 2018" },
-  { title: "Senior Secondary (Plus Two)", place: "GHSS Kidangara, Alappuzha", period: "2014 — 2016" },
-];
-
 export const footerLinks = {
   quick: [
     { label: "Home", href: "#top" },
     { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
     { label: "Services", href: "#services" },
-    { label: "Blog", href: "#blog" },
   ],
   portfolio: projects.map((p) => ({ label: p.title.split(" — ")[0], href: p.href })),
 };

@@ -48,7 +48,7 @@ function Pitch() {
   return (
     <div className="flex flex-col gap-4">
       <p className="text-sm text-muted">{profile.role}</p>
-      <h2 className="max-w-[440px] text-[28px] font-bold leading-[1.1] tracking-[-0.02em] md:text-[34px]">
+      <h2 className="max-w-[540px] text-h3 font-bold tracking-[-0.02em]">
         {profile.headline}
       </h2>
       <ProjectCtas className="mt-3" />

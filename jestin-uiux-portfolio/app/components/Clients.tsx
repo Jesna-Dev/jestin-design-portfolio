@@ -6,7 +6,7 @@ export default function Clients() {
   return (
     <section className="py-20 md:py-[140px] xl:py-[160px]">
       <Container>
-        <h2 className="mx-auto max-w-[550px] text-center text-2xl font-semibold leading-[1.4] md:text-[32px]">
+        <h2 className="mx-auto max-w-[550px] text-center text-h4 font-semibold">
           Brands and teams I&apos;ve had the pleasure to work with
         </h2>
       </Container>
@@ -19,7 +19,7 @@ export default function Clients() {
                   {c.logo ? (
                     <Image src={c.logo} alt={c.name} width={160} height={48} className="h-10 w-auto opacity-70" />
                   ) : (
-                    <span className="text-xl font-semibold text-muted">{c.name}</span>
+                    <span className="text-h4 font-semibold text-muted">{c.name}</span>
                   )}
                 </li>
               ))}

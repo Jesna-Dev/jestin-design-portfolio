@@ -8,7 +8,7 @@ export default function Process() {
         {/* Title row: tag left, heading in the right half */}
         <div className="grid gap-4 md:grid-cols-2">
           <Tag>Process</Tag>
-          <h2 className="text-[32px] font-bold leading-[1.125] tracking-[-0.01em] md:text-[42px] xl:text-[48px]">
+          <h2 className="text-h2 font-bold tracking-[-0.01em]">
             My Editing &amp; AI
             <br />
             Process
@@ -35,7 +35,7 @@ export default function Process() {
                 </span>
               </div>
               {/* Card grows taller on hover by opening up the space under the number */}
-              <h4 className="mt-16 text-2xl font-bold leading-[1.4] transition-[margin] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:mt-24 md:mt-24 md:group-hover:mt-36 xl:mt-[120px] xl:group-hover:mt-[180px]">
+              <h4 className="mt-16 text-h4 font-bold transition-[margin] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:mt-24 md:mt-24 md:group-hover:mt-36 xl:mt-[120px] xl:group-hover:mt-[180px]">
                 {p.title}
               </h4>
               <p className="mt-4 max-w-[380px] text-sm leading-[1.4] text-foreground/75 transition-colors duration-300 group-hover:text-foreground">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { education, experience } from "../content";
+import { experience } from "../content";
 import { Container, SectionTitle, Tag } from "./ui";
 
 const TICKS = 60;
@@ -121,7 +121,7 @@ function ScrollExperience() {
               {experience.map((e, i) => (
                 <li key={e.role + e.company} className="flex h-[200px] flex-col justify-center">
                   <h3
-                    className={`text-[36px] font-bold uppercase leading-[1.05] tracking-[-0.01em] transition-colors duration-500 xl:text-[44px] ${
+                    className={`text-h3 font-bold uppercase tracking-[-0.01em] transition-colors duration-500 ${
                       i === active ? "text-foreground" : "text-foreground/15"
                     }`}
                   >
@@ -177,7 +177,7 @@ function StackedExperience() {
         {experience.map((e) => (
           <li key={e.role + e.company} className="flex flex-col gap-3 border-b border-line py-10">
             <p className="font-mono text-sm text-accent">{e.period}</p>
-            <h3 className="text-2xl font-bold uppercase leading-[1.2]">{e.role}</h3>
+            <h3 className="text-h4 font-bold uppercase">{e.role}</h3>
             <p className="text-base text-muted">{e.company}</p>
             <ul className="mt-2 flex flex-col gap-3">
               {e.points.map((pt) => (
@@ -199,19 +199,6 @@ export default function Experience() {
     <section id="experience" className="scroll-mt-20 py-20 md:py-0">
       <StackedExperience />
       <ScrollExperience />
-
-      <Container className="mt-20 flex flex-col gap-6 md:mt-0 md:pb-[140px] xl:pb-[160px]">
-        <Tag>Education</Tag>
-        <ul className="grid gap-10 md:grid-cols-2 md:gap-6">
-          {education.map((ed) => (
-            <li key={ed.title} className="flex flex-col gap-2 border-b border-line pb-6">
-              <p className="font-mono text-sm text-accent">{ed.period}</p>
-              <h3 className="text-xl font-bold">{ed.title}</h3>
-              <p className="text-base text-muted">{ed.place}</p>
-            </li>
-          ))}
-        </ul>
-      </Container>
     </section>
   );
 }

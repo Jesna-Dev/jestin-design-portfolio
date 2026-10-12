@@ -12,7 +12,7 @@ export default function Services() {
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionTitle tag="Services" title="What I can do for you" />
-          <p className="max-w-[400px] text-lg leading-[1.5] text-muted">
+          <p className="max-w-[400px] text-base leading-[1.6] text-muted">
             Editing craft and AI tools under one roof, so your videos look sharp, hold attention and ship on time.
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function Services() {
                 >
                   <span className="font-mono text-base text-accent">{String(i + 1).padStart(2, "0")}</span>
                   <h3
-                    className={`flex-1 text-2xl font-semibold leading-[1.2] transition-colors md:text-[42px] ${
+                    className={`flex-1 text-h3 font-semibold transition-colors ${
                       isOpen ? "text-foreground" : "text-muted group-hover:text-foreground"
                     }`}
                   >
@@ -42,7 +42,7 @@ export default function Services() {
                   <div className="overflow-hidden">
                     <div className="grid gap-8 pb-10 md:grid-cols-[1fr_auto] md:pl-[72px]">
                       <div className="flex max-w-[540px] flex-col gap-6">
-                        <p className="text-lg leading-[1.5] text-muted">{s.body}</p>
+                        <p className="text-base leading-[1.6] text-muted">{s.body}</p>
                         <a
                           href={`mailto:${profile.email}`}
                           className="flex w-fit items-center gap-2 rounded-[2px] bg-accent px-5 py-3 text-base font-semibold text-accent-ink transition-opacity hover:opacity-85"
