@@ -3,26 +3,26 @@ import { Tag } from "./ui";
 
 export default function Process() {
   return (
-    <section id="process" className="bg-surface py-[60px] md:py-[120px]">
+    <section id="process" className="bg-surface py-20 md:py-[140px] xl:py-[160px]">
       <div className="mx-auto w-full max-w-[1280px] px-4 md:px-10">
         {/* Title row: tag left, heading in the right half */}
         <div className="grid gap-4 md:grid-cols-2">
           <Tag>Process</Tag>
           <h2 className="text-[32px] font-bold leading-[1.125] tracking-[-0.01em] md:text-[42px] xl:text-[48px]">
-            My Design &amp; Build
+            My Editing &amp; AI
             <br />
             Process
           </h2>
         </div>
 
         {/* </ ——— > divider */}
-        <div className="mt-10 flex items-center gap-2 font-mono text-base text-accent md:mt-12">
+        <div className="mt-12 flex items-center gap-2 font-mono text-base text-accent md:mt-16">
           <span>&lt;/</span>
           <span className="h-px flex-1 bg-foreground/30" />
           <span>&gt;</span>
         </div>
 
-        <ol className="mt-10 grid md:mt-16 md:grid-cols-3">
+        <ol className="mt-12 grid md:mt-20 md:grid-cols-3">
           {process.map((p, i) => (
             <li
               key={p.title}

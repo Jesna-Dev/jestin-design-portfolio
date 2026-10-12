@@ -8,16 +8,16 @@ export default function Services() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="services" className="scroll-mt-20 py-[60px] md:py-[120px]">
+    <section id="services" className="scroll-mt-20 py-20 md:py-[140px] xl:py-[160px]">
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionTitle tag="Services" title="What I can do for you" />
           <p className="max-w-[400px] text-lg leading-[1.5] text-muted">
-            Design, brand and build under one roof, so your product looks right, works right and actually ships.
+            Editing craft and AI tools under one roof, so your videos look sharp, hold attention and ship on time.
           </p>
         </div>
 
-        <ul className="mt-10 border-t border-line md:mt-14">
+        <ul className="mt-12 border-t border-line md:mt-20">
           {services.map((s, i) => {
             const isOpen = open === i;
             return (

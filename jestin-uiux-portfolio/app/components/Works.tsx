@@ -3,11 +3,11 @@ import { ArrowUpRight, Badge, Container, Divider, ImageSlot, SectionTitle } from
 
 export default function Works() {
   return (
-    <section id="works" className="scroll-mt-20 py-[60px] md:py-[120px]">
+    <section id="works" className="scroll-mt-20 py-20 md:py-[140px] xl:py-[160px]">
       <Container>
         <SectionTitle tag="Works" title="Selected projects" />
-        <Divider className="my-10 md:my-14" />
-        <div className="grid gap-x-6 gap-y-14 md:grid-cols-2">
+        <Divider className="my-12 md:my-20" />
+        <div className="grid gap-x-6 gap-y-20 md:grid-cols-2">
           {projects.map((p) => (
             <a key={p.title} href={p.href} className="group flex flex-col gap-6">
               <div className="relative">

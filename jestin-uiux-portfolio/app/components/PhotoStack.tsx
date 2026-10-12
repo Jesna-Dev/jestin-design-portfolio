@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import { aboutImages, profile } from "../content";
-import { ImageSlot } from "./ui";
+import Image from "next/image";
 
 // Final tilt of each photo once it lands on the stack.
-const tilts = [-6, 9, -3, 14, 4];
+const tilts = [-6, 9, -3, 12, 4, -9];
 
 function Asterisk({ className = "" }: { className?: string }) {
   return (
@@ -68,12 +68,12 @@ export default function PhotoStack() {
         <RoleTicker />
 
         <div className="relative z-10 h-[300px] w-full max-w-[358px] md:h-[478px] md:w-[474px] md:max-w-[474px]">
-          {aboutImages.map((src, i) => {
+          {aboutImages.map((img, i) => {
             const landed = i < shown;
             return (
               <div
                 key={i}
-                className="absolute left-1/2 top-1/2 transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                className="absolute left-1/2 top-1/2 w-max transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                 style={{
                   zIndex: i,
                   opacity: landed ? 1 : 0,
@@ -82,11 +82,13 @@ export default function PhotoStack() {
                     : `translate(-50%, 40%) rotate(0deg) scale(0.9)`,
                 }}
               >
-                <ImageSlot
-                  src={src}
-                  alt={`Photo ${i + 1}`}
-                  sizes="(min-width: 810px) 311px, 164px"
-                  className="aspect-[311/390] w-[200px] md:w-[311px]"
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={img.width}
+                  height={img.height}
+                  sizes="(min-width: 1200px) 360px, (min-width: 810px) 320px, 240px"
+                  className={`aspect-[4/5] w-[240px] object-cover ${"position" in img && img.position === "top" ? "object-top" : ""} shadow-[0_20px_60px_rgba(0,0,0,0.6)] md:w-[320px] xl:w-[360px]`}
                 />
               </div>
             );

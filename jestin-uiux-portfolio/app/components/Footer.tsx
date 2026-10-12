@@ -26,8 +26,9 @@ export default function Footer() {
         className="pointer-events-none absolute bottom-0 left-1/2 h-[400px] w-[1000px] -translate-x-1/2 translate-y-1/2 rounded-full opacity-20 blur-[140px]"
         style={{ background: "var(--accent)" }}
       />
-      <Container className="relative py-[60px] md:py-[120px]">
+      <Container className="relative py-20 md:py-[140px] xl:py-[160px]">
         {/* CTA */}
+        <p className="mb-6 font-mono text-base text-accent">{"// "}Have a video or design project? I&apos;m available for freelance work.</p>
         <a href={`mailto:${profile.email}`} className="group block">
           <h2 className="text-[48px] font-bold leading-[1.125] tracking-[-0.03em] md:text-[80px] xl:text-[110px]">
             Let&apos;s work
@@ -41,7 +42,7 @@ export default function Footer() {
 
         <div className="mt-16 h-px w-full bg-line md:mt-20" />
 
-        <div className="mt-10 grid gap-12 md:mt-14 md:grid-cols-[2fr_1fr]">
+        <div className="mt-12 grid gap-12 md:mt-20 md:grid-cols-[2fr_1fr]">
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
             <LinkColumn title="Quick links" links={footerLinks.quick} />
             <LinkColumn title="Portfolio" links={footerLinks.portfolio} />

@@ -6,6 +6,7 @@ import { profile } from "../content";
 const links = [
   { label: "Home", href: "#top" },
   { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
   { label: "Works", href: "#works" },
   { label: "Services", href: "#services" },
   { label: "Blog", href: "#blog" },
@@ -21,17 +22,25 @@ export default function Header() {
         <a href="#top" className="text-lg font-bold uppercase tracking-tight">
           {profile.name}
         </a>
-        <button
-          onClick={() => setOpen((o) => !o)}
-          aria-expanded={open}
-          aria-controls="site-menu"
-          className="flex h-11 w-40 items-center justify-between rounded-full bg-foreground px-5 text-base font-medium text-background transition-transform hover:scale-[1.03]"
-        >
-          <span>{open ? "Close" : "Menu"}</span>
-          <svg viewBox="0 0 24 24" className={`h-4 w-4 transition-transform duration-300 ${open ? "rotate-90" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-            <path d="m9 6-6 6 6 6M15 6l6 6-6 6" />
-          </svg>
-        </button>
+        <div className="flex items-center gap-3">
+          <a
+            href="#contact"
+            className="hidden h-11 items-center rounded-full bg-accent px-5 text-base font-medium text-accent-ink transition-transform hover:scale-[1.03] sm:flex"
+          >
+            Hire me
+          </a>
+          <button
+            onClick={() => setOpen((o) => !o)}
+            aria-expanded={open}
+            aria-controls="site-menu"
+            className="flex h-11 w-40 items-center justify-between rounded-full bg-foreground px-5 text-base font-medium text-background transition-transform hover:scale-[1.03]"
+          >
+            <span>{open ? "Close" : "Menu"}</span>
+            <svg viewBox="0 0 24 24" className={`h-4 w-4 transition-transform duration-300 ${open ? "rotate-90" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+              <path d="m9 6-6 6 6 6M15 6l6 6-6 6" />
+            </svg>
+          </button>
+        </div>
       </nav>
 
       <div

@@ -14,7 +14,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-[60px] md:py-[120px]">
+    <section id="testimonials" className="py-20 md:py-[140px] xl:py-[160px]">
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionTitle tag="Testimonials" title="What clients say" />
@@ -34,7 +34,7 @@ export default function Testimonials() {
 
         <div
           ref={track}
-          className="-mx-4 mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-2 [scrollbar-width:none] md:-mx-10 md:mt-14 md:px-10"
+          className="-mx-4 mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-2 [scrollbar-width:none] md:-mx-10 md:mt-20 md:px-10"
         >
           {testimonials.map((t, i) => (
             <article

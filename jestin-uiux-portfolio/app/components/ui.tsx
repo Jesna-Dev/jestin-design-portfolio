@@ -72,3 +72,24 @@ export function ArrowUpRight({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+// "Start a Project" pill + "View My Work" link, shared by the hero and intro.
+export function ProjectCtas({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex flex-wrap items-center gap-6 ${className}`}>
+      <a
+        href="#contact"
+        className="group flex items-center gap-4 rounded-full bg-accent py-1.5 pl-6 pr-1.5 text-base font-semibold text-accent-ink transition-transform hover:scale-[1.03]"
+      >
+        Start a Project
+        <span className="grid h-10 w-10 place-items-center rounded-full bg-background text-accent">
+          <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
+        </span>
+      </a>
+      <a href="#works" className="group flex items-center gap-2 text-base font-medium transition-colors hover:text-accent">
+        View My Work
+        <ArrowUpRight className="h-4 w-4 rotate-90 transition-transform duration-300 group-hover:translate-y-0.5" />
+      </a>
+    </div>
+  );
+}

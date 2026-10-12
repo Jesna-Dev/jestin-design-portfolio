@@ -34,10 +34,10 @@ function Skills() {
 
 export default function About() {
   return (
-    <section id="about" className="pb-[60px] md:pb-[120px]">
+    <section id="about" className="pb-20 md:pb-[140px] xl:pb-[160px]">
       <PhotoStack />
 
-      <Container className="mt-10 md:mt-14">
+      <Container className="mt-14 md:mt-20">
         <div className="grid gap-12 md:grid-cols-[minmax(0,550px)_minmax(0,540px)] md:justify-between xl:grid-cols-[550px_540px] xl:justify-start xl:gap-[90px]">
           <div className="flex flex-col gap-5">
             <Tag>Skills</Tag>
@@ -45,16 +45,24 @@ export default function About() {
           </div>
           <div className="flex flex-col items-start gap-8 md:pt-10">
             <p className="text-base leading-[1.6]">{story}</p>
-            <a
-              href={profile.resume}
-              className="rounded-full bg-accent px-7 py-3 text-base font-medium leading-none text-accent-ink transition-opacity hover:opacity-85"
-            >
-              My Resume
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="rounded-full bg-accent px-7 py-3 text-base font-medium leading-none text-accent-ink transition-opacity hover:opacity-85"
+              >
+                Hire me
+              </a>
+              <a
+                href={profile.resume}
+                className="rounded-full border border-line px-7 py-3 text-base font-medium leading-none transition-colors hover:border-accent"
+              >
+                My Resume
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="mt-20 grid gap-10 sm:grid-cols-3 md:mt-[100px] md:gap-16">
+        <div className="mt-24 grid gap-10 sm:grid-cols-3 md:mt-[120px] md:gap-16">
           {metrics.map((m) => (
             <div key={m.label} className="flex flex-col gap-2 border-b border-line pb-6">
               <p className="text-[40px] font-bold leading-[1.2] md:text-[48px]">{m.value}</p>

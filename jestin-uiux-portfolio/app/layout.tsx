@@ -14,9 +14,9 @@ const fragmentMono = Fragment_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jestin — UI/UX Designer · Graphic Designer · Vibe Coder",
+  title: "Rahul Raj — Freelance AI Video Editor · Motion Designer · Content Creator",
   description:
-    "Portfolio of Jestin: product and interface design, brand and graphic design, and AI-assisted builds that take ideas from sketch to live site.",
+    "Portfolio of Rahul Raj, freelance AI video editor: AI-powered video editing, generative visuals, short-form content and AI voice for creators and brands.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

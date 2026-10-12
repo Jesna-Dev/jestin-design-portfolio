@@ -3,10 +3,10 @@ import { Container, ImageSlot, SectionTitle } from "./ui";
 
 export default function Blog() {
   return (
-    <section id="blog" className="scroll-mt-20 py-[60px] md:py-[120px]">
+    <section id="blog" className="scroll-mt-20 py-20 md:py-[140px] xl:py-[160px]">
       <Container>
         <SectionTitle tag="Blog" title="Latest notes" />
-        <div className="mt-10 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
+        <div className="mt-12 grid gap-10 md:mt-20 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
           {posts.map((p) => (
             <a key={p.title} href={p.href} className="group flex flex-col gap-6">
               <ImageSlot

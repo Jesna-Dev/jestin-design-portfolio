@@ -4,13 +4,13 @@ import { Container } from "./ui";
 
 export default function Clients() {
   return (
-    <section className="py-[60px] md:py-[120px]">
+    <section className="py-20 md:py-[140px] xl:py-[160px]">
       <Container>
         <h2 className="mx-auto max-w-[550px] text-center text-2xl font-semibold leading-[1.4] md:text-[32px]">
           Brands and teams I&apos;ve had the pleasure to work with
         </h2>
       </Container>
-      <div className="mt-10 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] md:mt-14">
+      <div className="mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] md:mt-20">
         <div className="flex w-max animate-[marquee_30s_linear_infinite]">
           {[0, 1].map((k) => (
             <ul key={k} className="flex items-center" aria-hidden={k === 1}>
